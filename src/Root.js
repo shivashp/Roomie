@@ -5,7 +5,7 @@ import Login from './components/Login';
 const Root = () => {
   return (
     <Router key="root">
-      <Scene key="login" hideNavbar={true} component={Login} title="Login" />
+      <Scene key="login" hideNavBar={true} component={Login} title="Login" />
     </Router>
   )
 }
