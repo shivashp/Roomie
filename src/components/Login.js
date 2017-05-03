@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {
   View, Text, StyleSheet, Image, TouchableOpacity
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
+import Icon from 'react-native-vector-icons/Entypo';
 
 export default class extends Component {
   render() {
@@ -16,9 +18,9 @@ export default class extends Component {
           <Text style={styles.captionText}>Sign in to access your account.</Text>
         </View>
         <View style={styles.buttonSection}>
-          <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+          <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={Actions.home}>
             <View style={styles.fbbuttonLeft}>
-              <Text style={styles.leftText}>f</Text>
+              <Icon style={styles.leftText} name="facebook" />
             </View>
             <View style={styles.fbbuttonRight}>
               <Text style={styles.rightText}>Sign in with Facebook</Text>
@@ -27,7 +29,7 @@ export default class extends Component {
 
           <TouchableOpacity style={styles.button} activeOpacity={0.7}>
             <View style={styles.gbuttonLeft}>
-              <Text style={styles.leftText}>G</Text>
+              <Icon style={styles.leftText} name="google-" />
             </View>
             <View style={styles.gbuttonRight}>
               <Text style={styles.rightText}>Sign in with Google</Text>
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
   gbuttonLeft: {
     backgroundColor: '#AA2918',
     paddingVertical:12,
-    paddingHorizontal:20
+    paddingHorizontal:20,
   },
   gbuttonRight: {
     backgroundColor: '#CF4332',
