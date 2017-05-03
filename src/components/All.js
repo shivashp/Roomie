@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import {
   View, Text, ListView
 } from 'react-native';
@@ -42,7 +42,7 @@ const RoomList = [
   }
 ]
 
-export default class All extends Component {
+export default class All extends PureComponent {
   constructor(){
     super();
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -56,6 +56,7 @@ export default class All extends Component {
     )
   }
   render() {
+    console.log("All");
     return (
       <ListView
         dataSource={this.state.dataSource}

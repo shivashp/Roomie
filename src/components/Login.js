@@ -18,7 +18,7 @@ export default class extends Component {
           <Text style={styles.captionText}>Sign in to access your account.</Text>
         </View>
         <View style={styles.buttonSection}>
-          <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={Actions.home}>
+          <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={Actions.main}>
             <View style={styles.fbbuttonLeft}>
               <Icon style={styles.leftText} name="facebook" />
             </View>
@@ -27,7 +27,7 @@ export default class extends Component {
             </View>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.button} activeOpacity={0.7}>
+          <TouchableOpacity style={styles.button} activeOpacity={0.7} onPress={Actions.main}>
             <View style={styles.gbuttonLeft}>
               <Icon style={styles.leftText} name="google-" />
             </View>
@@ -76,7 +76,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#3B5998',
     paddingVertical:12,
     paddingHorizontal:20,
-    minWidth:200
   },
   rightText: {
     color:'white',
@@ -91,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#CF4332',
     paddingVertical:12,
     paddingHorizontal:20,
-    minWidth:200
+    paddingRight:40
   }
 
 })

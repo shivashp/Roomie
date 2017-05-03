@@ -6,7 +6,7 @@ import {
 export default class SingleProperty extends PureComponent {
   render() {
     return (
-      <TouchableOpacity activeOpacity={0.8}>
+      <TouchableOpacity activeOpacity={0.9}>
         <View style={styles.imageSection}>
           <Image
             source = {{uri: this.props.uri}}
