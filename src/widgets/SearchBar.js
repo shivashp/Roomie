@@ -5,7 +5,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 class SearchBar extends Component {
-  render() {
+  render() {    
     return(
       <View style={styles.container} activeOpacity={0.6} onPress={this.props.onPress}>
         <View style={styles.search_icon}>

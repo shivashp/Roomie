@@ -1,5 +1,6 @@
 import SearchBar from './SearchBar';
+import SingleProperty from './SingleProperty';
 
 export {
-   SearchBar
+   SearchBar, SingleProperty
 }
