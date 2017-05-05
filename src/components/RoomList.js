@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { SingleProperty } from '../widgets'
 
-const RoomList = [
+const data = [
   {
     id: 1,
     uri: 'https://cdn.pixabay.com/photo/2014/12/15/14/05/home-office-569153_960_720.jpg',
@@ -42,12 +42,12 @@ const RoomList = [
   }
 ]
 
-export default class All extends PureComponent {
+export default class RoomList extends PureComponent {
   constructor(){
     super();
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
     this.state = {
-      dataSource: ds.cloneWithRows(RoomList),
+      dataSource: ds.cloneWithRows(data),
     };
   }
   _renderRow(data) {

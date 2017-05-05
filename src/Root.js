@@ -3,6 +3,9 @@ import { Router, Scene } from 'react-native-router-flux';
 import { Text } from 'react-native';
 import Login from './components/Login';
 import Home from './components/Home';
+import Settings from './components/Settings';
+import Bookmarks from './components/Bookmarks';
+import MyListings from './components/MyListings';
 import AddPost from './components/AddPost';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -11,12 +14,12 @@ const Root = () => {
     <Router key="root" hideNavBar={true} >
         <Scene key = "main" tabs = {true} pressOpacity={0.7} tabBarStyle={{ backgroundColor: '#FFFFFF', borderTopWidth:1, borderColor: '#ccc'}} animation="fade">
           <Scene key = "home" icon = {TabIcon} component={Home} title="Home" />
-          <Scene key = "second" icon = {TabIcon} component={Home} title="List" />
-          <Scene key = "third" icon = {TabIcon} component={AddPost} title="Add"/>
-          <Scene key = "fourth" icon = {TabIcon} component={Home} title="Bookmark" />
-          <Scene key = "fifth" icon = {TabIcon} component={Home} title="Setting" />
+          <Scene key = "listings" icon = {TabIcon} component={MyListings} title="List" />
+          <Scene key = "third" icon = {TabIcon} component={AddPost} title="Add" initial={true}/>
+          <Scene key = "bookmark" icon = {TabIcon} component={Bookmarks} title="Bookmark"/>
+          <Scene key = "settings" icon = {TabIcon} component={Settings} title="Setting"/>
         </Scene>
-      <Scene key="login" component={Login} title="Login" initial={true}/>
+      <Scene key="login" component={Login} title="Login"/>
     </Router>
   )
 }

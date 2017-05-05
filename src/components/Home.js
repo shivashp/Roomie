@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { SearchBar, SingleProperty } from '../widgets'
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import All from './All';
+import RoomList from './RoomList';
 
 export default class Home extends Component {
   render() {
@@ -16,7 +16,7 @@ export default class Home extends Component {
             tabBarUnderlineStyle ={{backgroundColor: '#3B7CEC', height:2, position: 'absolute', bottom: -1}}
             tabBarActiveTextColor={'#3B7CEC'}
             tabBarInactiveTextColor={'#9DABC0'}>
-            <All tabLabel="ALL" />
+            <RoomList tabLabel="ALL" />
             <Sample tabLabel="ROOM" />
             <Sample1 tabLabel="OFFICE" />
             <SingleProperty tabLabel="FLAT" />
