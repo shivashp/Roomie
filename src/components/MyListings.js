@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity, ScrollView
+  View, Text, StyleSheet, TouchableOpacity, ScrollView, Platform
 } from 'react-native';
 import { SingleProperty } from '../widgets';
 import { RoomList } from './RoomList';
@@ -39,6 +39,6 @@ const styles = StyleSheet.create({
   },
   roomsList: {
     marginTop:50,
-    marginBottom:40
+    paddingBottom:(Platform.OS === 'android')?110:50,
   }
 })
